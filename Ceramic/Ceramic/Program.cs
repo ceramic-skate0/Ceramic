@@ -24,7 +24,7 @@ namespace Ceramic
                             XOREncrypt.XORShellcodeFile(args[x + 1], args[x + 2]);
                             break;
                         case "-far":
-                            XOREncrypt.XORShellcodeFile(args[x + 1], args[x + 2]);
+                            FindAndReplace.ReadFileReplaceString(args[x + 1], args[x + 2], args[x + 3]);
                             break;
                         case "?":
                             Usage();
