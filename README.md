@@ -9,7 +9,6 @@ Also its a compile it your self kinda thing. If your unaware of how to do this P
 
 
 # Usage:
-
             CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
             Cuz I cant remember all the random commandline ares to do it.      
             So yes things are case sensitive and yes the commandline inputs must be in order shown below.
@@ -21,6 +20,9 @@ Also its a compile it your self kinda thing. If your unaware of how to do this P
 
             -xor {Input .bin File Path} {XOR KEY}
             The command above will xor a .bin file with a key and output it to a file. This mean when you un xor it you will need the same key.
+
+            -far {Input File or the file you want to search thru} {What you want to change} {What you want to change it to (File or string}
+            'far' (Find and Replace) will take a input file(1st arg) and then replace in that file the 2nd arg you specify with either the string your specify or the conents of a file you specify in the 3rd arg.
 
               
 
