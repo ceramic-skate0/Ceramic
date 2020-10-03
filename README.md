@@ -1,5 +1,6 @@
 # Ceramic
 A simple .Netcore application i built to do Red Teaming things for me. shhh this mean you can run it on Limnux and Windows :)
+Also its a compile it your self kinda thing. If your unaware of how to do this Please Google it like a Red Teamer.
 
 
 # Usage:
