@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Ceramic
 {
@@ -6,6 +6,11 @@ namespace Ceramic
     {
         static void Main(string[] args)
         {
+            if (args.Length<=0)
+            {
+                Usage();
+                Environment.Exit(0);
+            }
             try
             {
                 for (int x = 0; x < args.Length; ++x)
