@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Ceramic
 {
@@ -59,7 +59,7 @@ namespace Ceramic
             -xor {Input .bin File Path} {XOR KEY}
             The command above will xor a .bin file with a key and output it to a file. This mean when you un xor it you will need the same key.
 
-            -far {Input File or the file you want to search thru} {What you want to change} {What you want to change it to (File or string}
+            -far {Input File or the file you want to search thru} {What you want to change} {What you want to change it to (File or string)(Will check to see if file exists if not assumes you wanted to use a string)}
             'far' (Find and Replace) will take a input file(1st arg) and then replace in that file the 2nd arg you specify with either the string your specify or the conents of a file you specify in the 3rd arg.
             ");
         }
