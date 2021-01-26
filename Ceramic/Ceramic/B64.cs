@@ -7,7 +7,7 @@ namespace Ceramic
 {
     class B64
     {
-        public static void Base64File(string FilePath)
+        public static string Base64File(string FilePath)
         {
             if (!File.Exists(FilePath))
             {
@@ -17,6 +17,7 @@ namespace Ceramic
             byte[] bytes = File.ReadAllBytes(FilePath);
             Console.WriteLine("Writing file to Base64FileOutput.txt");
             File.WriteAllText("Base64FileOutput.txt", Convert.ToBase64String(bytes));
+            return Convert.ToBase64String(bytes);
             //Console.WriteLine(Convert.ToBase64String(bytes));
         }
 
