@@ -9,12 +9,18 @@ Also its a compile it your self kinda thing. If your unaware of how to do this P
 
 
 # Usage:
-          CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
-            Cuz I cant remember all the random commandline ares to do it.      
+            CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
+            Cuz I cant remember all the random commandline args and tools to do it.      
             So yes things are case sensitive and yes the commandline inputs must be in order shown below.
 
             Commandline Params:
+            
+            -AVFileCheck {Input File Path}
+            Run a modified version of DefenderCheck by matterpreter to try and trigger and AV response to test a file           
 
+            -DefenderCheck {Input File Path}
+             matterpreter tool. Takes a binary as input and splits it until it pinpoints that exact byte that Microsoft Defender will flag on, and then prints those offending bytes to the screen. This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
+            
             -b64 {Input File Path}
             The command above will base64 encode a input file and save it to an output file.
 
@@ -25,6 +31,7 @@ Also its a compile it your self kinda thing. If your unaware of how to do this P
 
             -far {Input File or the file you want to search thru} {What you want to change} {What you want to change it to (File or string)(Will check to see if file exists if not assumes you wanted to use a string)}
             'far' (Find and Replace) will take a input file(1st arg) and then replace in that file the 2nd arg you specify with either the string your specify or the conents of a file you specify in the 3rd arg.
+            
             
 
               
