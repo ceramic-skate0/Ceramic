@@ -75,7 +75,7 @@ namespace Ceramic
         {
             Console.WriteLine(@"
             CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
-            Cuz I cant remember all the random commandline ares to do it.      
+            Cuz I cant remember all the random commandline args and tools to do it.      
             So yes things are case sensitive and yes the commandline inputs must be in order shown below.
 
             Commandline Params:
