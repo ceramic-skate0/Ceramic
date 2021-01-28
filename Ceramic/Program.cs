@@ -79,7 +79,13 @@ namespace Ceramic
             So yes things are case sensitive and yes the commandline inputs must be in order shown below.
 
             Commandline Params:
+            
+            -AVFileCheck {Input File Path}
+            Run a modified version of DefenderCheck by matterpreter to try and trigger and AV response to test a file           
 
+            -DefenderCheck {Input File Path}
+             matterpreter tool. Takes a binary as input and splits it until it pinpoints that exact byte that Microsoft Defender will flag on, and then prints those offending bytes to the screen. This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
+            
             -b64 {Input File Path}
             The command above will base64 encode a input file and save it to an output file.
 
