@@ -6,14 +6,19 @@ using System.Security.Cryptography;
 using System.Text;
 
 namespace Ceramic
-{
+{    
     static class AESEncryptShellcode
     {
+        //private static string aes_iv = "bsxnWolsAyO7kCfWuyrnqg==";
+        //private static string aes_key = "AXe8YwuIn1zxt3FPWTZFlAa14EHdPAdN9FaZ9RQWihc=";
+        
         public static byte[] Encrypt(byte[] bytesToEncrypt, string password,string iv)
         {
             byte[] ivSeed = Guid.NewGuid().ToByteArray();
 
             var rfc = new Rfc2898DeriveBytes(password, ivSeed);
+            //byte[] Key = Convert.FromBase64String(aes_key);
+            //byte[] IV = Convert.FromBase64String(aes_iv);;
             byte[] Key = Encoding.Unicode.GetBytes(password);
             byte[] IV = Encoding.Unicode.GetBytes(iv);
 
