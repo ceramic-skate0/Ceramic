@@ -37,7 +37,3 @@ Also its a compile it your self kinda thing. If your unaware of how to do this P
             
             -ChunckRAWtoVBArrys {Input .RAW File Path to shellcode file}
             Attempts chunk and encode a shellcode input file and output it into a VBA ready to copy and paste output. Optional 2nd arg to tell it how many chunks. Default 100.
-
-
-              
-
