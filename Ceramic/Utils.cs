@@ -81,7 +81,7 @@ namespace Ceramic
             // Return the encrypted bytes from the memory stream.
             return encrypted;
         }
-        
+
         public static byte[] StringToByteArray(string hex)
         {
             return Enumerable.Range(0, hex.Length)
