@@ -1,12 +1,12 @@
 # Ceramic
-A simple .MET application I built to do common Red Teaming things for me. 
+A simple dotNET application I built to do common Red Teaming things for me. 
 
 # Contrib
 - Open an Issue
 - Do it yourself via a Pull Request
 
 ## FYSA:
-As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/BytzChk.C!MTB' says this tool is used to make malware. Seems a little much but when your crawling Github looking to flag repo's with Key words guess this fits the bill.
+As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/BytzChk.C!MTB' says this tool is used to make malware. Seems a little much but when your crawling Github looking to flag repo's with Key words guess this fits the bill. This is likely because i left a compiled version in the releases XD and some automated scraper got it and said bad strings.
 
 # Usage:
             CeramicSkate0's 1 stop shop in dotnet to do random Red Team tasks via 1 app.  
