@@ -1,15 +1,12 @@
 # Ceramic
-A simple .Netcore application i built to do Red Teaming things for me. shhh this mean you can run it on Linux and Windows :)
-Also its a compile it your self kinda thing. If your unaware of how to do this Please Google it like a Red Teamer.
+A simple .MET application I built to do common Red Teaming things for me. 
 
 # Contrib
-
 - Open an Issue
 - Do it yourself via a Pull Request
 
-
 # Usage:
-            CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
+            CeramicSkate0's 1 stop shop in dotnet to do random Red Team tasks via 1 app.  
             Cuz I cant remember all the random commandline args and tools to do it.      
             So yes things are case sensitive and yes the commandline inputs must be in order shown below.
 
