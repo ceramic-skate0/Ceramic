@@ -35,4 +35,16 @@ Below is what was used/tested:
 
 ``cd Ceramic/Ceramic``
 
+### Option 1 (Build it yourself)
+
 ``$ ~/Ceramic/Ceramic > dotnet run``
+
+### Option 2 (Run Prebuilt)
+
+``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.exe``
+
+``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.dll``
+
+``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.runtimeconfig.json``
+
+``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.deps.json``
