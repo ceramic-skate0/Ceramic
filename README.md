@@ -37,3 +37,24 @@ As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/
             
             -ChunckRAWtoVBArrys {Input .RAW File Path to shellcode file}
             Attempts chunk and encode a shellcode input file and output it into a VBA ready to copy and paste output. Optional 2nd arg to tell it how many chunks. Default 100.
+
+
+## Install dotnet on Ubuntu:
+Most up to date Reference for installing dotnet and support for other Linux platforms is https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
+
+Below is what was used/tested:
+```wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb```
+
+```sudo dpkg -i packages-microsoft-prod.deb```
+
+```sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0```
+  
+```sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y aspnetcore-runtime-5.0```
+
+```sudo apt-get install -y dotnet-runtime-5.0```
