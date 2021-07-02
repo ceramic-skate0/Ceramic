@@ -5,6 +5,9 @@ A simple .MET application I built to do common Red Teaming things for me.
 - Open an Issue
 - Do it yourself via a Pull Request
 
+# FYSA:
+As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/BytzChk.C!MTB' says this tool is used to make malware. Seems a little much but when your crawling Github looking to flag repo's with Key words guess this fits the bill.
+
 # Usage:
             CeramicSkate0's 1 stop shop in dotnet to do random Red Team tasks via 1 app.  
             Cuz I cant remember all the random commandline args and tools to do it.      
