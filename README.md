@@ -48,3 +48,11 @@ Below is what was used/tested:
 ``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.runtimeconfig.json``
 
 ``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.deps.json``
+
+### Option 2.5 (Run Prebuilt)
+
+``wget https://github.com/ceramicskate0/Ceramic/releases/download/1.0/Ceramic.zip``
+
+``sudo apt install unzip -y``
+
+``unzip Ceramic.zip``
