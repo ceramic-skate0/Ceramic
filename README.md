@@ -63,4 +63,4 @@ Below is what was used/tested:
 
 ``cd Ceramic/Ceramic``
 
-``$ ~/Ceramic/Ceramic > dotnet Ceramic.exe``
+``$ ~/Ceramic/Ceramic > dotnet run``
