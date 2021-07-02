@@ -66,7 +66,6 @@ namespace Ceramic
             Console.WriteLine(" [+] Junk string added " + numberOfTimeToAdd.ToString() + " times");
             return originalString;
         }
-
         public static string RandomStringWithSPace(int length = 0)
         {
             const string chars = "ABC DEFGHIJ KLMNOPQ RSTUVWXYZqwer tyu iopasdf ghjklzxc vbnm";
@@ -80,14 +79,12 @@ namespace Ceramic
                 return new string(Enumerable.Repeat(chars, GetRandomInt(10)).Select(s => s[random.Next(s.Length)]).ToArray());
             }
         }
-
         public static byte[] CreateKey(string password, int keyBytes = 32)
         {
             const int Iterations = 300;
             var keyGenerator = new Rfc2898DeriveBytes(password, new byte[] { 0xDE, 0xAD, 0xBE, 0xEF, 0xDE, 0xAD, 0xBE, 0xEF }, Iterations);
             return keyGenerator.GetBytes(keyBytes);
         }
-
         // From: https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.aescryptoserviceprovider?view=netframework-4.7.2
         public static byte[] EncryptStringToBytes_Aes(string plainTextInputData, byte[] Key, byte[] IV)
         {
@@ -128,7 +125,6 @@ namespace Ceramic
             // Return the encrypted bytes from the memory stream.
             return encrypted;
         }
-
         public static byte[] StringToByteArray(string hex)
         {
             return Enumerable.Range(0, hex.Length)
@@ -136,7 +132,11 @@ namespace Ceramic
                              .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
                              .ToArray();
         }
-
+        static IEnumerable<string> Split(string str, int chunkSize)
+        {
+            return Enumerable.Range(0, str.Length / chunkSize)
+                .Select(i => str.Substring(i * chunkSize, chunkSize));
+        }
     }
 }
 
