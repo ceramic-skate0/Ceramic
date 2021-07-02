@@ -5,7 +5,7 @@ A simple .MET application I built to do common Red Teaming things for me.
 - Open an Issue
 - Do it yourself via a Pull Request
 
-# FYSA:
+## FYSA:
 As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/BytzChk.C!MTB' says this tool is used to make malware. Seems a little much but when your crawling Github looking to flag repo's with Key words guess this fits the bill.
 
 # Usage:
