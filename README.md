@@ -1,5 +1,5 @@
 # Ceramic
-A simple dotNET application I built to do common Red Teaming things for me. 
+A simple dotNET 5.0 application I built to do common Red Teaming things for me. This way no dotnet core and will run on Linux and windows.
 
 # Contrib
 - Open an Issue
