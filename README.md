@@ -60,5 +60,7 @@ Below is what was used/tested:
 ``sudo apt-get install -y dotnet-runtime-5.0``
 
 ``$ ~ > git clone --recurse-submodules https://github.com/ceramicskate0/Ceramic
+
 $ ~ > cd Ceramic/Ceramic
+
 $ ~/Ceramic/Ceramic > dotnet Ceramic.exe
