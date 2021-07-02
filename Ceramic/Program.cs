@@ -27,9 +27,6 @@ namespace Ceramic
                         case "-far":
                             FindAndReplace.ReadFileReplaceString(args[x + 1], args[x + 2], args[x + 3]);
                             break;
-                        case "?":
-                            Usage();
-                            break;
                         case "-AVFileCheck":
                             AVChunkTest.AVTest(args[x + 1]);
                             break;
@@ -62,10 +59,59 @@ namespace Ceramic
                                 Console.WriteLine("[!] SHIT SOMETHING WENT WRONG! "+e.Message.ToString());
                             }
                             break;
+                        case "-Reverse":
+                            if (File.Exists(args[x + 1]))
+                            {
+                                string filename = Path.GetFileName(args[x + 1]).Split('.')[0] + "reverse";
+                                string Dir = Path.GetDirectoryName(args[x + 1]);
+                                string ext = Path.GetExtension(args[x + 1]);
+                                Console.WriteLine("[*] Writing File with reverse string "+Dir+"\\"+filename+ext+" to current dir");
+                                File.WriteAllText(Dir+"\\"+filename+ext, Utils.ReverseString(File.ReadAllText(args[x + 1])));
+                            }
+                            else
+                             {
+                                Console.WriteLine("[!] So you files isnt where you said it was. " + args[x + 1]);
+                             }
+                            break;
+                        case "-AddJunk":
+                            if (File.Exists(args[x + 1]))
+                            {
+                                string filename = Path.GetFileName(args[x + 1]).Split('.')[0] + "reverse";
+                                string Dir = Path.GetDirectoryName(args[x + 1]);
+                                string ext = Path.GetExtension(args[x + 1]);
+
+                                Console.WriteLine("[*] Writing File with Junk in string " + Dir + "\\" + filename + ext + " to current dir");
+                                File.WriteAllText(Dir + "\\" + filename + ext, Utils.AddJunkToString(File.ReadAllText(args[x + 1])));
+                            }
+                            else
+                            {
+                                Console.WriteLine("[!] So you files isnt where you said it was. " + args[x + 1]);
+                            }
+                            break;
+                        case "-BitReplaceBin":
+                            if (File.Exists(args[x + 1]))
+                            {
+                                if (args.Length == 2)
+                                {
+                                    BinOps.ReplaceBinString(args[x + 1], args[x + 2]);
+                                }
+                                else
+                                {
+                                    BinOps.ReplaceBinString(args[x + 1], args[x + 2],args[x+3]);
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("[!] So you files isnt where you said it was. " + args[x + 1]);
+                            }
+                            break;
                         case "-h":
                             Usage();
                             break;
                         case "-help":
+                            Usage();
+                            break;
+                        case "?":
                             Usage();
                             break;
                     }
@@ -108,6 +154,15 @@ namespace Ceramic
             
             -ChunckRAWtoVBArrys {Input .RAW File Path to shellcode file}
             Attempts chunk and encode a shellcode input file and output it into a VBA ready to copy and paste output. Optional 2nd arg to tell it how many chunks. Default 100.
+
+            -Reverse {Input File Path}
+            Reads the entire file as 1 string and will write another file with the first files contents reversed.
+    
+            -AddJunk {Input File Path}
+            Reads a file and will randomly add a randomly generated junk string into the files contents and then output a new file with the junk in it.
+
+            -BitReplaceBin {Input File Path/Name} {Ouput File Path/Name} {OPTIONAL: URL with list of bad strings to randomly replace 1 per line}
+            Will read in a compiled (.Net prefered) file and bin replace the bad strings from a list via a URL of the found in the file then write new copy.
 
             ");
         }

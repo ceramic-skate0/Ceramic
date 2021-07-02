@@ -11,18 +11,65 @@ namespace Ceramic
     {
         private static Random random = new Random(DateTime.Now.Millisecond);
 
-        public static int GetRandomInt(int max)
+        public static int GetRandomInt(int max,int min=5)
         {
-            return random.Next(5, max);
+            return random.Next(min, max);
         }
-        /// <summary>
-        /// Method to create a random string with no spaces or special chars
-        /// </summary>
-        /// <param name="length">If provided is the max length of string. If not provided, will create one randomly of length 5-10</param>
-        /// <returns></returns>
         public static string RandomString(int length = 0)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZqwertyuiopasdfghjklzxcvbnm";
+
+            if (length > 0)
+            {
+                return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+            }
+            else
+            {
+                return new string(Enumerable.Repeat(chars, GetRandomInt(10)).Select(s => s[random.Next(s.Length)]).ToArray());
+            }
+        }
+        public static string RandomSpecialChars(int length = 0)
+        {
+            const string chars = "!@#$%^&*()_+=-{}][|`~";
+
+            if (length > 0)
+            {
+                return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+            }
+            else
+            {
+                return new string(Enumerable.Repeat(chars, GetRandomInt(10)).Select(s => s[random.Next(s.Length)]).ToArray());
+            }
+        }
+        public static string ReverseString(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+        public static string AddJunkToString(string originalString, string JunkToAdd = "", int StringLocationToStartAddingJunk=1)
+        {
+            if (JunkToAdd == "")
+            {
+                JunkToAdd = RandomSpecialChars(GetRandomInt(20,2));
+            }
+            Console.WriteLine("[+] Junk string added is:" + JunkToAdd);
+            Random rand = new Random();
+            int numberOfTimeToAdd=rand.Next(0, originalString.Length);
+
+            for (int x=0; x<numberOfTimeToAdd;++x)
+            {
+                originalString.Insert(x, JunkToAdd);
+            }
+            Console.WriteLine(" [+] Junk string added is:" + JunkToAdd);
+
+            Console.WriteLine(" [+] Junk string added " + numberOfTimeToAdd.ToString() + " times");
+            return originalString;
+        }
+
+        public static string RandomStringWithSPace(int length = 0)
+        {
+            const string chars = "ABC DEFGHIJ KLMNOPQ RSTUVWXYZqwer tyu iopasdf ghjklzxc vbnm";
 
             if (length > 0)
             {
@@ -89,6 +136,7 @@ namespace Ceramic
                              .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
                              .ToArray();
         }
+
     }
 }
 

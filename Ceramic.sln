@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ceramic", "Ceramic\Ceramic.csproj", "{277EA148-959D-4119-81CF-F71D20508037}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ceramic", "Ceramic\Ceramic.csproj", "{52F5A858-810B-46E0-8A13-9CFB1BBCB262}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{277EA148-959D-4119-81CF-F71D20508037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{277EA148-959D-4119-81CF-F71D20508037}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{277EA148-959D-4119-81CF-F71D20508037}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{277EA148-959D-4119-81CF-F71D20508037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F5A858-810B-46E0-8A13-9CFB1BBCB262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F5A858-810B-46E0-8A13-9CFB1BBCB262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F5A858-810B-46E0-8A13-9CFB1BBCB262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F5A858-810B-46E0-8A13-9CFB1BBCB262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B1BFD70D-D4C9-4C00-8442-3EE883BB39CF}
+		SolutionGuid = {1B947ED3-BE05-4A62-956C-63B8A5EDF116}
 	EndGlobalSection
 EndGlobal
