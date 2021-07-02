@@ -10,9 +10,6 @@ namespace Ceramic
     class VBA
     {
 
-        private static byte[] RawShellcode;
-        // array3 = Split(Join(array1, ",") & "," & Join(array2, ","), ",") 
-
         public static void ChunckRAWtoVBArrys(string FilePath)
         {
             int ChunkSizes = 100;

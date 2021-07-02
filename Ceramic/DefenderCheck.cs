@@ -71,14 +71,14 @@ namespace Ceramic
 
             private static void Setup()
             {
-                RegistryKey defenderService = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Policies\Microsoft\Windows Defender");
-                object defenderServiceValue = defenderService.GetValue("DisableAntiSpyware");
-                if (!defenderServiceValue.Equals(0)) //This is the case in situations like Commando
+                //RegistryKey defenderService = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Policies\Microsoft\Windows Defender");
+                //object defenderServiceValue = defenderService.GetValue("DisableAntiSpyware");
+                //if (!defenderServiceValue.Equals(0)) //This is the case in situations like Commando
                 {
-                    Console.WriteLine("[-] The defender antispyware service is not enabled, so MpCmdRun will fail. Exiting...");
-                   Environment.Exit(1);
+                   //Console.WriteLine("[-] The defender antispyware service is not enabled, so MpCmdRun will fail. Exiting...");
+                   //Environment.Exit(1);
                 }
-               defenderService.Close();
+               //defenderService.Close();
 
                 if (!Directory.Exists(@"C:\temp"))
                 {
