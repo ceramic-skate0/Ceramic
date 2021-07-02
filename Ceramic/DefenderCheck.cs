@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -82,8 +82,8 @@ namespace Ceramic
 
                 if (!Directory.Exists(@"C:\temp"))
                 {
-                    Console.WriteLine(@"[-] C:\Temp\ doesn't exist. Creating it.");
-                    Directory.CreateDirectory(@"C:\Temp");
+                    Console.WriteLine(@"[-] Creating required folder");
+                    Directory.CreateDirectory(@"C:\emp");
                }
 
             }
@@ -119,7 +119,7 @@ namespace Ceramic
                 int newsize = (originalarray.Length - splitarraysize) / 2 + splitarraysize;
                 if (newsize.Equals(originalarray.Length - 1))
                 {
-                    Console.WriteLine("Exhausted the search. The binary looks good to go!");
+                    Console.WriteLine("[*] Ending the search. The file looks ok to go!");
                     Environment.Exit(0);
                 }
                 byte[] newarray = new byte[newsize];
@@ -136,7 +136,7 @@ namespace Ceramic
                 }
 
                 var process = new Process();
-                var mpcmdrun = new ProcessStartInfo(@"C:\Program Files\Windows Defender\MpCmdRun.exe")
+                var mpcmdrun = new ProcessStartInfo(@"C:\Program Files\Windows"+@" Defender\MpCmdRun.exe")
                 {
                     Arguments = $"-Scan -ScanType 3 -File \"{file}\" -DisableRemediation -Trace -Level 0x10",
                     CreateNoWindow = true,
