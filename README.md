@@ -93,3 +93,11 @@ Below is what was used/tested:
 ``sudo apt install unzip -y``
 
 ``unzip Ceramic.zip``
+
+### Run (from Ceramic Dir)
+
+``dotnet run``
+
+### OR
+
+``dotnet Ceramic.(exe/dll)``
