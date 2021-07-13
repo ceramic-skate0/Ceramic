@@ -68,6 +68,25 @@ namespace Ceramic
                                 Console.WriteLine("[!] SHIT SOMETHING WENT WRONG! "+e.Message.ToString());
                             }
                             break;
+                        case "-ConvertToHEX":
+                            try
+                            {
+                                if (File.Exists(args[x + 1]))
+                                {
+                                    byte[] tmp = File.ReadAllBytes(args[x + 1]);
+                                    Console.WriteLine("[*] Writing File 'HexCodeOuput.txt' to current dir");
+                                    File.WriteAllText("HexCodeOuput.txt", BinaryOperations.ByteArrayToString(tmp));
+                                }
+                                else
+                                {
+                                    Console.WriteLine("[!] So you files isnt where you said it was. " + args[x + 1]);
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("[!] SHIT SOMETHING WENT WRONG! " + e.Message.ToString());
+                            }
+                            break;
                         case "-Reverse":
                             if (File.Exists(args[x + 1]))
                             {
@@ -179,6 +198,8 @@ namespace Ceramic
             -GZIP {Input File Path} {Output File Path}(optional)
             Take a file readf all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file 'GZIPFileOutput.gz' in cwd
 
+            -ConvertToHEX {Input File Path}
+            Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX called 'HexCodeOuput.txt'
             ");
         }
     }
