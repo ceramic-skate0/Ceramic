@@ -52,7 +52,9 @@ As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/
 
             -GZIP {Input File Path} {Output File Path}(optional)
             Take a file readf all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file                           'GZIPFileOutput.gz' in cwd
-
+            
+            -ConvertToHEX {Input File Path}
+            Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX called 'HexCodeOuput.txt'
 
 ## Install dotnet on Ubuntu:
 
