@@ -48,6 +48,9 @@ namespace Ceramic
                         case "-ChunckRAWtoVBArrys":
                             VBA.ChunckRAWtoVBArrys(args[x + 1]);
                             break;
+                        case "-ConvertToIntArray":
+                            File.WriteAllText("ConvertedINTArray.txt",BinaryOperations.ByteShellcodeToInt(File.ReadAllBytes(args[x+1])));
+                            break;
                         case "-aes":
                             try
                             {
@@ -200,6 +203,9 @@ namespace Ceramic
 
             -ConvertToHEX {Input File Path}
             Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX called 'HexCodeOuput.txt'
+
+            -ConvertToIntArray {Input File Path}
+            Take a bin file and output a txt file with an array of INT's. Oupput file is ConvertedINTArray.txt
             ");
         }
     }
