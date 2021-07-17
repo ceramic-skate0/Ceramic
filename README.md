@@ -56,6 +56,9 @@ As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/
             -ConvertToHEX {Input File Path}
             Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX called 'HexCodeOuput.txt'
 
+            -ConvertToIntArray {Input File Path}
+            Take a bin file and output a txt file with an array of INT's. Oupput file is ConvertedINTArray.txt
+            
 ## Install dotnet on Ubuntu:
 
 Most up to date Reference for installing dotnet and support for other Linux platforms is https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
