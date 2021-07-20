@@ -1,4 +1,4 @@
-﻿using dnlib.DotNet;
+using dnlib.DotNet;
 using dnlib.DotNet.Emit;
 using System;
 using System.Collections.Generic;
@@ -14,8 +14,8 @@ namespace Ceramic
     {
         public static string ByteShellcodeToInt(byte[] shellcode)
         {
-            int[] bytesAsInts = shellcode.Select(x => (int)x).ToArray(); 
-            result = bytesAsInts.ToString(",");
+            int[] bytesAsInts = Array.ConvertAll(shellcode, c => (int)c);
+            string result = string.Join(",", bytesAsInts);
             return result;
         }
 
