@@ -51,6 +51,9 @@ namespace Ceramic
                         case "-ConvertToIntArray":
                             File.WriteAllText("ConvertedINTArray.txt",BinaryOperations.ByteShellcodeToInt(File.ReadAllBytes(args[x+1])));
                             break;
+                        case "-ConvertToINT64Array":
+                            File.WriteAllText("ConvertedINT64Array.txt", BinaryOperations.ByteToInt64(File.ReadAllBytes(args[x + 1])));
+                            break;
                         case "-aes":
                             try
                             {
@@ -206,6 +209,10 @@ namespace Ceramic
 
             -ConvertToIntArray {Input File Path}
             Take a bin file and output a txt file with an array of INT's. Oupput file is ConvertedINTArray.txt
+
+            -ConvertToINT64Array {Input File Path}
+            Take a bin file and output a txt file with an array of INT64's. Oupput file is ConvertedINT64Array.txt
+
             ");
         }
     }
