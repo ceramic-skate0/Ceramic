@@ -1,6 +1,8 @@
 # Ceramic
 A simple dotNET 5.0 application I built to do common Red Teaming things for me. This way no dotnet core and will run on Linux and windows.
 
+# Like the work dont forget to hit that Star Button and Sponsor
+
 # Contrib
 - Open an Issue
 - Do it yourself via a Pull Request
