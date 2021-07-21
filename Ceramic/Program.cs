@@ -43,15 +43,19 @@ namespace Ceramic
                             DefenderCheck.DefenderCheckScan(args[x + 1]);
                             break;
                         case "-ChunkHTAShellcode":
-                            HTA.ChunkRAWShellcode_HTA(args[x + 1], Convert.ToInt32(args[x + 2]));
+                            Console.WriteLine("[*] Writing File ChunkHTAShellcode.txt");
+                            File.WriteAllText("ChunkHTAShellcode.txt", HTA.ChunkRAWShellcode_HTA(args[x + 1], Convert.ToInt32(args[x + 2])));
                             break;
                         case "-ChunckRAWtoVBArrys":
-                            VBA.ChunckRAWtoVBArrys(args[x + 1]);
+                            Console.WriteLine("[*] Writing File ChunckRAWtoVBArrys.txt");
+                            File.WriteAllText("ChunckRAWtoVBArrys.txt",VBA.ChunckRAWtoVBArrys(args[x + 1]));
                             break;
                         case "-ConvertToIntArray":
+                            Console.WriteLine("[*] Writing File ConvertedINTArray.txt");
                             File.WriteAllText("ConvertedINTArray.txt",BinaryOperations.ByteShellcodeToInt(File.ReadAllBytes(args[x+1])));
                             break;
                         case "-ConvertToINT64Array":
+                            Console.WriteLine("[*] Writing File ConvertedINT64Array.txt");
                             File.WriteAllText("ConvertedINT64Array.txt", BinaryOperations.ByteToInt64(File.ReadAllBytes(args[x + 1])));
                             break;
                         case "-aes":
@@ -110,7 +114,7 @@ namespace Ceramic
                         case "-AddJunk":
                             if (File.Exists(args[x + 1]))
                             {
-                                string filename = Path.GetFileName(args[x + 1]).Split('.')[0] + "reverse";
+                                string filename = Path.GetFileName(args[x + 1]).Split('.')[0] + "junked";
                                 string Dir = Path.GetDirectoryName(args[x + 1]);
                                 string ext = Path.GetExtension(args[x + 1]);
 
@@ -173,45 +177,46 @@ namespace Ceramic
              matterpreter tool. Takes a binary as input and splits it until it pinpoints that exact byte that Microsoft Defender will flag on, and then prints those offending bytes to the screen. This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
             
             -b64 {Input File Path}
-            The command above will base64 encode a input file and save it to an output file.
+            The command above will base64 encode a input file and save it to an output file Base64FileOutput.txt.
 
             -xor {Input .bin File Path} {XOR KEY}
-            The command above will xor a .bin file with a key and output it to a file. This mean when you un xor it you will need the same key.
+            The command above will xor a byte file with a key and output it to XorShellcode.bin. This mean when you un-xor it you will need the same key.
 
             -aes {Input .bin File Path} {AES KEY} {AES IV}
+             Read a byte file and will aes encrypt it with the provided Key and IV. Output file is EncryptedShellcode.bin
 
             -far {Input File or the file you want to search thru} {What you want to change} {What you want to change it to (File or string)(Will check to see if file exists if not assumes you wanted to use a string)}
-            'far' (Find and Replace) will take a input file(1st arg) and then replace in that file the 2nd arg you specify with either the string your specify or the conents of a file you specify in the 3rd arg.
+            'FAR' (Find and Replace) will take a input file(1st arg) and then replace in that file the 2nd arg you specify with either the string your specify or the conents of a file you specify in the 3rd arg.
 
             -ChunkHTAShellcode {Input a already B64 encoded shellcode File Path} {Optional: Number of chunks}
             Attempts chunk and encode a shellcode input file and output it into a HTA ready to copy and paste output. Optional 2nd arg to tell it how many chunks. Default 100.
             
-            -ChunckRAWtoVBArrys {Input .RAW File Path to shellcode file}
-            Attempts chunk and encode a shellcode input file and output it into a VBA ready to copy and paste output. Optional 2nd arg to tell it how many chunks. Default 100.
+            -ChunckRAWtoVBArrys {Input File Path}
+            Attempts chunk and encode a byte input file and output it into a VBA ready to copy and paste output. Optional 2nd arg to tell it how many chunks. Default 100.
 
             -Reverse {Input File Path}
-            Reads the entire file as 1 string and will write another file with the first files contents reversed.
+            Reads the entire text file as 1 string and will write another file with the first files contents reversed. Output file will be same file name .reverse
     
             -AddJunk {Input File Path}
-            Reads a file and will randomly add a randomly generated junk string into the files contents and then output a new file with the junk in it.
+            Reads a text file and will randomly add a randomly generated junk string into the files contents and then output a new file with the junk in it. Output file will be same file name .junked
 
             -BitReplaceBin {Input File Path/Name} {Ouput File Path/Name} {OPTIONAL: URL with list of bad strings to randomly replace 1 per line}
             Will read in a compiled (.Net prefered) file and bin replace the bad strings from a list via a URL of the found in the file then write new copy.
 
             -obfuscateDotNETbin {input dotnet dll/exe} {Output name of dotnet dll/exe}
-            Takes in a dotnet exe or dll and scrambles it to look diffrent
+            Takes in a .Net exe or dll and scrambles it to look diffrent
 
             -GZIP {Input File Path} {Output File Path}(optional)
-            Take a file readf all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file 'GZIPFileOutput.gz' in cwd
+            Take a byte file read all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file 'GZIPFileOutput.gz' in cwd
 
             -ConvertToHEX {Input File Path}
-            Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX called 'HexCodeOuput.txt'
+            Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX output file is 'HexCodeOuput.txt'
 
             -ConvertToIntArray {Input File Path}
-            Take a bin file and output a txt file with an array of INT's. Oupput file is ConvertedINTArray.txt
+            Take a byte file and output a txt file with an array of INT's. Output file is ConvertedINTArray.txt
 
             -ConvertToINT64Array {Input File Path}
-            Take a bin file and output a txt file with an array of INT64's. Oupput file is ConvertedINT64Array.txt
+            Take a byte file and output a txt file with an array of INT64's. Output file is ConvertedINT64Array.txt
 
             ");
         }
