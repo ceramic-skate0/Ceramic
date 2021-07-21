@@ -14,7 +14,8 @@ namespace Ceramic
     {
 
        private const string formatter = "{0,5}{1,27}{2,24}";
-
+        
+       //REF: https://docs.microsoft.com/en-us/dotnet/api/system.bitconverter.toint64?view=net-5.0
         private static Int64 BAToInt64(byte[] bytes, int index)
         {
             long value = BitConverter.ToInt64(bytes, index);
