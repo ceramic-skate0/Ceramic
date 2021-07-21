@@ -9,7 +9,7 @@ A simple dotNET 5.0 application I built to do common Red Teaming things for me. 
 As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/BytzChk.C!MTB' says this tool is used to make malware. Seems a little much but when your crawling Github looking to flag repo's with Key words guess this fits the bill. This is likely because i left a compiled version in the releases XD and some automated scraper got it and said bad strings.
 
 # Usage:
-                        CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
+               CeramicSkate0's 1 stop shop in dotnet core to do random Red Team tasks via 1 app.  
             Cuz I cant remember all the random commandline args and tools to do it.      
             So yes things are case sensitive and yes the commandline inputs must be in order shown below.
 
@@ -51,13 +51,16 @@ As of 01Jul21 ummm defender flags this tools when its compiled as 'VirTool:MSIL/
             Takes in a dotnet exe or dll and scrambles it to look diffrent
 
             -GZIP {Input File Path} {Output File Path}(optional)
-            Take a file readf all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file                           'GZIPFileOutput.gz' in cwd
-            
+            Take a file readf all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file 'GZIPFileOutput.gz' in cwd
+
             -ConvertToHEX {Input File Path}
             Take a byte file and output a hex version of it.Ouputs the byte file to a file of string HEX called 'HexCodeOuput.txt'
 
             -ConvertToIntArray {Input File Path}
             Take a bin file and output a txt file with an array of INT's. Oupput file is ConvertedINTArray.txt
+
+            -ConvertToINT64Array {Input File Path}
+            Take a bin file and output a txt file with an array of INT64's. Oupput file is ConvertedINT64Array.txt
             
 ## Install dotnet on Ubuntu:
 
