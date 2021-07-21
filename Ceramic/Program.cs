@@ -171,10 +171,10 @@ namespace Ceramic
             Commandline Params:
             
             -AVFileCheck {Input File Path}
-            Run a modified version of DefenderCheck by matterpreter to try and trigger and AV response to test a file           
+            Run a modified version of DefenderCheck by matterpreter to try and trigger and AV response to test a file. Inspired by code from https://github.com/matterpreter/DefenderCheck          
 
             -DefenderCheck {Input File Path}
-             matterpreter tool. Takes a binary as input and splits it until it pinpoints that exact byte that Microsoft Defender will flag on, and then prints those offending bytes to the screen. This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
+             matterpreter tool. Takes a binary as input and splits it until it pinpoints that exact byte that Microsoft Defender will flag on, and then prints those offending bytes to the screen. This can be helpful when trying to identify the specific bad pieces of code in your tool/payload. This code is from https://github.com/matterpreter/DefenderCheck
             
             -b64 {Input File Path}
             The command above will base64 encode a input file and save it to an output file Base64FileOutput.txt.
@@ -204,7 +204,7 @@ namespace Ceramic
             Will read in a compiled (.Net prefered) file and bin replace the bad strings from a list via a URL of the found in the file then write new copy.
 
             -obfuscateDotNETbin {input dotnet dll/exe} {Output name of dotnet dll/exe}
-            Takes in a .Net exe or dll and scrambles it to look diffrent
+            Takes in a .Net exe or dll and scrambles it to look diffrent. This code is from https://github.com/BinaryScary/NET-Obfuscate.
 
             -GZIP {Input File Path} {Output File Path}(optional)
             Take a byte file read all the bytes in it and gzip the file and output a compressed version of it. Optional output file can be given. Default output file 'GZIPFileOutput.gz' in cwd
