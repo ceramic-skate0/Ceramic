@@ -12,6 +12,27 @@ namespace Ceramic
 {
     class BinaryOperations
     {
+
+       private const string formatter = "{0,5}{1,27}{2,24}";
+
+        private static Int64 BAToInt64(byte[] bytes, int index)
+        {
+            long value = BitConverter.ToInt64(bytes, index);
+            return value;
+        }
+        
+        public static string ByteToInt64(byte[] shellcode)
+        {
+            string t="";
+
+            for (int n = 0; n < shellcode.Length; n += 8)
+            {
+                t += BAToInt64(shellcode, n)+",";
+            }
+
+            return t.TrimEnd(',');
+        }
+
         public static string ByteShellcodeToInt(byte[] shellcode)
         {
             int[] bytesAsInts = Array.ConvertAll(shellcode, c => (int)c);
