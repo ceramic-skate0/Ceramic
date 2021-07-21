@@ -9,7 +9,7 @@ namespace Ceramic
 {
     class VBA
     {
-        public static void ChunckRAWtoVBArrys(string FilePath)
+        public static string ChunckRAWtoVBArrys(string FilePath)
         {
             int ChunkSizes = 100;
             List<string> Chunks = new List<string>();
@@ -50,7 +50,8 @@ namespace Ceramic
                 VBA += VBAArrayName + "= Join(Array(" + Chunks.ElementAt(x) + "))\r\n";
             }
 
-            VBA += "\r\n";           
+            VBA += "\r\n";
+            return VBA;
         }
 
     }
